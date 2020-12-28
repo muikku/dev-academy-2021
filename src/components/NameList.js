@@ -21,8 +21,7 @@ const NameList = () => {
   if(filteredNames.length === 0) return <Typography variant='h5'>Not found, try different search :)</Typography>
   return (
     <div>
-      <Typography>Showing a total of {filteredNames.length} names and that appear {totalAmount(filteredNames)} times.</Typography>
-      <Typography>List below shows how popular a top name is at Solita.</Typography>
+      <Typography>Showing a total of {filteredNames.length} names and that appear {totalAmount(filteredNames)} times. List below shows how popular a top name is at Solita.</Typography>
       <List>
         {filteredNames
         .sort(returnCorrectSortFunction(isSortedByAlphabet))
