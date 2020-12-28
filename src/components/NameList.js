@@ -18,10 +18,11 @@ const NameList = () => {
   const isSortedByAlphabet = sort === ALPHA
 
   if(!names) return <Typography>loading names...</Typography>
-
+  if(filteredNames.length === 0) return <Typography variant='h5'>Not found, try different search :)</Typography>
   return (
     <div>
-      <Typography>List below shows how popular a top name is at Solita. Showing a total of {filteredNames.length} names and that appear {totalAmount(filteredNames)} times at Solita.</Typography>
+      <Typography>Showing a total of {filteredNames.length} names and that appear {totalAmount(filteredNames)} times.</Typography>
+      <Typography>List below shows how popular a top name is at Solita.</Typography>
       <List>
         {filteredNames
         .sort(returnCorrectSortFunction(isSortedByAlphabet))
