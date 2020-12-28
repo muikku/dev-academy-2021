@@ -6,7 +6,7 @@ const staticNamesListInJSON = require("../names.json")
 // request from backend to get names data. 
 
 const useNames = () => {
-  const [state, dispatch] = useStateValue()
+  const [, dispatch] = useStateValue()
   
   useEffect(() => {
     dispatch({
